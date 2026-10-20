@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { useEffect, useState } from 'react';
 
 import { Technologies } from '../components/technologies';
 
@@ -7,6 +8,31 @@ const profileImageUrl = `${import.meta.env.BASE_URL}android-chrome-512x512.png`;
 export const Route = createFileRoute('/')({
   component: HomePage,
 });
+
+function Age() {
+  const [age, setAge] = useState<number | null>(null);
+
+  useEffect(() => {
+    const updateAge = () => {
+      const today = new Date();
+      const birthdayIsAhead =
+        today.getMonth() < 9 ||
+        (today.getMonth() === 9 && today.getDate() < 28);
+      setAge(today.getFullYear() - 2002 - (birthdayIsAhead ? 1 : 0));
+    };
+
+    // Calculate in the browser so the static page never freezes the age at build time.
+    updateAge();
+    const interval = window.setInterval(updateAge, 60_000);
+    return () => window.clearInterval(interval);
+  }, []);
+
+  return (
+    <p className="text-base text-white/70">
+      {age === null ? 'Born on October 28, 2002' : `${age} years old`}
+    </p>
+  );
+}
 
 function HomePage() {
   return (
@@ -22,6 +48,7 @@ function HomePage() {
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Román Benjámin</h1>
           <h2 className="text-2xl font-bold">alias Svetch</h2>
+          <Age />
           <p className="text-lg">
             Platform / DevOps engineer &amp; full-stack developer
           </p>
