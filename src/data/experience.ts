@@ -112,7 +112,7 @@ const technologies: Technology[] = [
     name: 'Next.js',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg',
     link: 'https://nextjs.org/',
-    dates: [{ start: new Date('2024-01-05'), end: new Date('2025-10-01') }],
+    dates: [{ start: new Date('2024-01-05'), end: new Date() }],
     type: 'framework',
   },
   {
@@ -255,7 +255,10 @@ const technologies: Technology[] = [
     name: 'Drizzle',
     logo: 'https://github.com/drizzle-team/drizzle-orm/raw/main/misc/readme/logo-github-sq-dark.svg#gh-dark-mode-only',
     link: 'https://orm.drizzle.team/',
-    dates: [{ start: new Date('2024-03-21'), end: new Date('2024-08-27') }],
+    dates: [
+      { start: new Date('2024-03-21'), end: new Date('2024-08-27') },
+      { start: new Date('2025-12-10'), end: new Date() },
+    ],
     type: 'tool',
   },
   //#endregion
@@ -407,6 +410,85 @@ const technologies: Technology[] = [
     type: 'devops',
   },
   //#endregion
+  // New entries use the earliest verified work in the reviewed commit history;
+  // these dates do not claim when the technology was first learned.
+  {
+    name: 'Terraform',
+    logo: '',
+    link: 'https://www.terraform.io/',
+    dates: [{ start: new Date('2024-12-03'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Argo CD',
+    logo: '',
+    link: 'https://argo-cd.readthedocs.io/',
+    dates: [{ start: new Date('2025-10-16'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Cilium',
+    logo: '',
+    link: 'https://cilium.io/',
+    dates: [{ start: new Date('2025-11-07'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Bun',
+    logo: '',
+    link: 'https://bun.sh/',
+    dates: [{ start: new Date('2025-07-01'), end: new Date() }],
+    type: 'tool',
+  },
+  {
+    name: 'Coder',
+    logo: '',
+    link: 'https://coder.com/',
+    dates: [{ start: new Date('2025-02-17'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Playwright',
+    logo: '',
+    link: 'https://playwright.dev/',
+    dates: [{ start: new Date('2025-09-02'), end: new Date() }],
+    type: 'tool',
+  },
+  {
+    name: 'PGlite',
+    logo: '',
+    link: 'https://pglite.dev/',
+    dates: [{ start: new Date('2026-07-31'), end: new Date() }],
+    type: 'database',
+  },
+  {
+    name: 'OpenTelemetry',
+    logo: '',
+    link: 'https://opentelemetry.io/',
+    dates: [{ start: new Date('2026-04-21'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Infisical',
+    logo: '',
+    link: 'https://infisical.com/',
+    dates: [{ start: new Date('2026-07-21'), end: new Date() }],
+    type: 'devops',
+  },
+  {
+    name: 'Turborepo',
+    logo: '',
+    link: 'https://turborepo.com/',
+    dates: [{ start: new Date('2025-07-30'), end: new Date() }],
+    type: 'tool',
+  },
+  {
+    name: 'Biome',
+    logo: '',
+    link: 'https://biomejs.dev/',
+    dates: [{ start: new Date('2025-10-13'), end: new Date() }],
+    type: 'tool',
+  },
 ];
 export type Experience = {
   technologies: Technology[];

@@ -22,10 +22,43 @@ function HomePage() {
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Román Benjámin</h1>
           <h2 className="text-2xl font-bold">alias Svetch</h2>
-          <p className="text-lg">Fullstack developer</p>
+          <p className="text-lg">
+            Platform / DevOps engineer &amp; full-stack developer
+          </p>
+          <p className="mt-3 max-w-xl text-base text-white/70">
+            I build and operate Kubernetes platforms, automate delivery and
+            developer workflows, and develop full-stack business applications.
+          </p>
         </div>
       </section>
+      <section className="mx-auto max-w-4xl px-5 py-8">
+        <h2 className="mb-4 text-center text-2xl">What I work on</h2>
+        <ul className="list-disc space-y-3 pl-5">
+          <li>
+            Infrastructure and GitOps: Kubernetes, Terraform, Argo CD,
+            networking, PostgreSQL operations, backups, and environment
+            provisioning.
+          </li>
+          <li>
+            Developer platforms and delivery: Coder, devcontainers, GitHub
+            Actions, release automation, and PR preview environments.
+          </li>
+          <li>
+            Reliability and security: Grafana, Prometheus, Loki, Mimir, Tempo,
+            OpenTelemetry, secret management, and production troubleshooting.
+          </li>
+          <li>
+            Full-stack development: TypeScript, React, Next.js, Node.js, Bun,
+            PostgreSQL, external integrations, and Cloudflare Workers.
+          </li>
+          <li>
+            Software quality: PGlite backend test environments, Playwright E2E
+            tests, CI quality gates, and backend architecture modernization.
+          </li>
+        </ul>
+      </section>
       <section className="flex flex-col py-2">
+        <h2 className="mb-4 text-center text-2xl">Technology experience</h2>
         <Technologies />
       </section>
       <section className="py-2">

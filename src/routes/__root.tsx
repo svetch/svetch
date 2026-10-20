@@ -18,11 +18,11 @@ export const Route = createRootRoute({
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
-      { title: 'Svetch | Fullstack developer' },
+      { title: 'Svetch | Platform / DevOps & Full-stack' },
       {
         name: 'description',
         content:
-          'I am a fullstack developer with a passion for web development.',
+          'Platform / DevOps engineer and full-stack developer from Hungary, building Kubernetes infrastructure, developer platforms, and TypeScript applications.',
       },
     ],
     links: [
